@@ -48,16 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
         images: [
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-1.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-2.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-3.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-4.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-5.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-6.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-7.jpg",
+            "../Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-1.jpg",
+            "../Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-2.jpg"
         ],
-        title: "Pimenurgad",
-        caption: "Kanal galerii, 2023"
+        title: "Vaenukõne Eelnõust",
+        caption: "Tallinna tänavad, 2021"
     }
   ];
 
