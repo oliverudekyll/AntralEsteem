@@ -57,7 +57,7 @@ div.title {
     bottom: 1rem;
     left: 1rem;
 
-    font-family: "Ladna Faux Bold";
+    font-family: "Ladna Faux Bold", Arial, sans-serif;
     font-size: 8rem;
     line-height: 6rem;
     letter-spacing: -.4rem;
@@ -79,7 +79,7 @@ a#contact {
     top: 1rem;
     left: 1rem;
 
-    font-family: "Ladna Faux Regular";
+    font-family: "Ladna Faux Regular", Arial, sans-serif;
     font-size: 2.25rem;
     line-height: 2.25rem;
     letter-spacing: -.09rem;
@@ -120,7 +120,7 @@ a.language {
     top: 1rem;
     right: 1rem;
 
-    font-family: "Ladna Faux Regular";
+    font-family: "Ladna Faux Regular", Arial, sans-serif;
     font-size: 2.25rem;
     line-height: 2.25rem;
     letter-spacing: -.09rem;
@@ -157,7 +157,7 @@ div.nav-bar a {
     margin: 0;
 /*     padding-left: 1rem; */
 
-    font-family: "Ladna Faux Regular";
+    font-family: "Ladna Faux Regular", Arial, sans-serif;
     font-size: 2.25rem;
     line-height: 2.25rem;
     letter-spacing: -.09rem;
@@ -185,11 +185,11 @@ div.nav-bar a:hover {
 }
 
 #works {
-    font-family: "Ladna Faux Regular";
+    font-family: "Ladna Faux Regular", Arial, sans-serif;
 }
 
 #works.active {
-    font-family: "Ladna Faux Bold";
+    font-family: "Ladna Faux Bold", Arial, sans-serif;
 }
 
 
@@ -243,7 +243,7 @@ img.work {
 }
 
 a.work {
-    font-family: "Ladna Faux Bold", sans-serif;
+    font-family: "Ladna Faux Bold", Arial, sans-serif;
     font-size: 1rem;
     line-height: 1rem;
     letter-spacing: -.04rem;
@@ -258,7 +258,7 @@ a.work {
 }
 
 a.work b {
-    font-family: "Ladna Faux Regular";
+    font-family: "Ladna Faux Regular", Arial, sans-serif;
     font-weight: normal;
     padding-left: .2rem;
 }
