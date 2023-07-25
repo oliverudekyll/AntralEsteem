@@ -150,10 +150,10 @@ div.nav-bar {
     display: flex;
     column-gap: 1rem;
 
-    z-index: 1;
+    z-index: 20;
 }
 
-div.nav-bar a {
+div.nav-button-container {
     margin: 0;
 /*     padding-left: 1rem; */
 
@@ -167,6 +167,7 @@ div.nav-bar a {
     cursor: pointer;
     white-space: nowrap;
     z-index: 10;
+    mix-blend-mode: normal;
 
     transition: mix-blend-mode .1s ease-in-out, filter .2s ease-in-out;
 
@@ -178,10 +179,10 @@ div.nav-bar a {
             user-select: none;
 }
 
-div.nav-bar a:hover {
+div.nav-button-container:hover {
     mix-blend-mode: difference;
     filter: blur(4px);
-    white-space: nowrap;
+
 }
 
 #works {
@@ -189,6 +190,22 @@ div.nav-bar a:hover {
 }
 
 #works.active {
+    font-family: "Ladna Faux Bold", Arial, sans-serif;
+}
+
+#texts {
+    font-family: "Ladna Faux Regular", Arial, sans-serif;
+}
+
+#texts.active {
+    font-family: "Ladna Faux Bold", Arial, sans-serif;
+}
+
+#cv {
+    font-family: "Ladna Faux Regular", Arial, sans-serif;
+}
+
+#cv.active {
     font-family: "Ladna Faux Bold", Arial, sans-serif;
 }
 
@@ -221,6 +238,7 @@ div#works-container.active {
     column-gap: 4rem;
 
     z-index: 10;
+    overflow: auto;
 
 }
 
@@ -243,13 +261,15 @@ img.work {
 }
 
 a.work {
-    font-family: "Ladna Faux Bold", Arial, sans-serif;
+    font-family: "Ladna Faux Bold", sans-serif, Arial, sans-serif;
     font-size: 1rem;
     line-height: 1rem;
     letter-spacing: -.04rem;
     text-decoration: none;
-
+/*     text-transform: uppercase;
+ */
     color: rgb(230, 230, 230);
+    mix-blend-mode: difference;
     cursor: pointer;
     white-space: nowrap;
     z-index: 10;
@@ -258,7 +278,97 @@ a.work {
 }
 
 a.work b {
-    font-family: "Ladna Faux Regular", Arial, sans-serif;
+    font-family: "Ladna Faux Regular", sans-serif, Arial, sans-serif;
     font-weight: normal;
     padding-left: .2rem;
+    text-transform: initial;
+}
+
+
+
+
+
+div.column-container {
+    position: fixed;
+    width: calc(100dvw - 2rem);
+    height: 100dv;
+
+    display: flex;
+    justify-content: space-around;
+
+    mix-blend-mode: difference;
+    z-index: 15;
+
+    pointer-events: none;
+    overflow: hidden;
+}
+
+div#texts-container {
+    position: relative;
+    width: 37.5vw;
+    height: 100dvh;   
+    opacity: 0;
+
+    overflow: scroll;
+    pointer-events: initial;
+}
+
+div#cv-container {
+    position: relative;
+    width: 37.5vw;
+    height: 100dvh;    
+    opacity: 0;
+
+    overflow: scroll;
+    pointer-events: initial;
+}
+
+div#texts-container.active {
+    position: relative;
+    width: 37.5vw;
+    height: 100dvh;   
+    opacity: 1;
+
+    overflow: scroll;
+    pointer-events: initial;
+}
+
+div#cv-container.active {
+    position: relative;
+    width: 37.5vw;
+    height: 100dvh;   
+    opacity: 1;
+
+    overflow: scroll;
+    pointer-events: initial;
+}
+
+div.padding {
+    height: 6.25rem;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    margin-bottom: .25rem;
+
+    font-family: "Ladna Faux Bold", sans-serif;
+    font-size: 2.25rem;
+    line-height: 2.25rem;
+    letter-spacing: -.09rem;
+
+    color: rgb(230, 230, 230);
+}
+
+p.body {
+    margin: 0;
+
+    font-family: "Ladna Faux Regular", sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: -.02rem;
+    text-wrap: balance;
+
+    color: rgb(230, 230, 230);
+
 }

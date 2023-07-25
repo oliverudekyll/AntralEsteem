@@ -43,16 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
             "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-6.jpg",
             "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-7.jpg",
         ],
-        title: "Pimenurgad",
-        caption: "Kanal galerii, 2023"
+        title: "Dark Corners",
+        caption: "Kanal Gallery, 2023"
     },
     {
         images: [
             "../Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-1.jpg",
             "../Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-2.jpg"
         ],
-        title: "Vaenukõne Eelnõust",
-        caption: "Tallinna tänavad, 2021"
+        title: "On the Hate Speech Draft Legislation",
+        caption: "Streets of Tallinn, 2021"
     }
   ];
 
@@ -65,7 +65,7 @@ function changeImage(index) {
     img.src = worksPaths[index].images[currentImageIndex];
     currentImageIndex = (currentImageIndex + 1) % worksPaths[index].images.length;
 }
-}
+};
 
 for (var i = 0; i < worksPaths.length; i++) {
   var a = document.createElement("a");
@@ -85,7 +85,7 @@ for (var i = 0; i < worksPaths.length; i++) {
   worksContainer.appendChild(worksDiv);
 
   img.addEventListener("click", changeImage(i));
-}
+};
 
 document.addEventListener("DOMContentLoaded", function(){
     var worksButton = document.getElementById("works");
@@ -95,6 +95,36 @@ document.addEventListener("DOMContentLoaded", function(){
         worksButton.classList.toggle("active");
         worksContainer.classList.toggle("active");
     })
-})
+});
+
+document.addEventListener("DOMContentLoaded", function(){
+  var textsButton = document.getElementById("texts");
+/*   var textsContainer = document.getElementById("texts-container"); */
+
+  textsButton.addEventListener("click", function(){
+      textsButton.classList.toggle("active");
+/*       textsContainer.classList.toggle("active"); */
+  })
+});
+
+document.addEventListener("DOMContentLoaded", function(){
+  var cvButton = document.getElementById("cv");
+   var cvContainer = document.getElementById("cv-container");
+
+  cvButton.addEventListener("click", function(){
+      cvButton.classList.toggle("active");
+       cvContainer.classList.toggle("active");
+  })
+});
+
+document.addEventListener("DOMContentLoaded", function(){
+  var textsButton = document.getElementById("texts");
+   var textsContainer = document.getElementById("texts-container");
+
+  textsButton.addEventListener("click", function(){
+      textsButton.classList.toggle("active");
+       textsContainer.classList.toggle("active");
+  })
+});
 
   
