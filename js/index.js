@@ -32,6 +32,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+  var textsPaths = [
+    {
+      title: "Glass Struggle",
+      caption: "Manifest and photographic essay"
+    },
+    {
+      title: "Transparency Register",
+      caption: "Essay and photography"
+    },
+    {
+      title: "Hybrid ≠ avant-garde",
+      caption: '"Art criticism of "NU Performance Festival"'
+    },
+    {
+      title: "From the Peripheries",
+      caption: "Texts on windows"
+    },
+    {
+      title: "On The Role of Mental Images in Reasoning",
+      caption: "Degree work"
+    }
+  ];
+
+  var textsContainer = document.getElementById("texts-container");
+
+  for (i = 0; i < textsPaths.length; i++) {
+    var textLink = document.createElement("a");
+    textLink.className = "text-article";
+
+    var h1 = document.createElement("h1");
+    h1.textContent = textsPaths[i].title;
+
+    var p = document.createElement("p");
+    p.textContent = textsPaths[i].caption;
+    p.className = "caption";
+
+    var paddingDiv = document.createElement("div");
+    paddingDiv.className = "padding";
+
+    textLink.appendChild(h1);
+    textLink.appendChild(p);
+    textsContainer.appendChild(textLink);
+  };
+
+
+
+
+
   var worksPaths = [
     {
         images: [
@@ -57,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
 
   var worksContainer = document.getElementById("works-container");
+
+
 
 function changeImage(index) {
   var currentImageIndex = 0;
@@ -87,6 +137,11 @@ for (var i = 0; i < worksPaths.length; i++) {
   img.addEventListener("click", changeImage(i));
 };
 
+
+
+
+
+// WORKS BUTTON
 document.addEventListener("DOMContentLoaded", function(){
     var worksButton = document.getElementById("works");
     var worksContainer = document.getElementById("works-container");
@@ -97,16 +152,18 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 });
 
+// TEXTS BUTTON
 document.addEventListener("DOMContentLoaded", function(){
   var textsButton = document.getElementById("texts");
-/*   var textsContainer = document.getElementById("texts-container"); */
+  var textsContainer = document.getElementById("texts-container"); 
 
   textsButton.addEventListener("click", function(){
       textsButton.classList.toggle("active");
-/*       textsContainer.classList.toggle("active"); */
+       textsContainer.classList.toggle("active");
   })
 });
 
+// CV BUTTON
 document.addEventListener("DOMContentLoaded", function(){
   var cvButton = document.getElementById("cv");
    var cvContainer = document.getElementById("cv-container");
@@ -115,16 +172,6 @@ document.addEventListener("DOMContentLoaded", function(){
       cvButton.classList.toggle("active");
        cvContainer.classList.toggle("active");
   })
-});
-
-document.addEventListener("DOMContentLoaded", function(){
-  var textsButton = document.getElementById("texts");
-   var textsContainer = document.getElementById("texts-container");
-
-  textsButton.addEventListener("click", function(){
-      textsButton.classList.toggle("active");
-       textsContainer.classList.toggle("active");
-  })
-});
-
+}
+);
   

@@ -104,7 +104,7 @@ a#contact {
 a:hover {
     mix-blend-mode: difference;
     filter: blur(4px);
-    white-space: nowrap;
+/*     white-space: nowrap; */
 }
 
 
@@ -245,8 +245,10 @@ div#works-container.active {
 div.project {
     display: flex;
     flex-flow: column nowrap;
+    align-items: flex-start;
     row-gap: .5rem;
-    max-width: min-content;
+    /* max-width: min-content; */
+    aspect-ratio: 4 / 3;
 
     transition: width .5s ease-in-out;
 }
@@ -305,52 +307,68 @@ div.column-container {
 
 div#texts-container {
     position: relative;
-    width: 37.5vw;
-    height: 100dvh;   
+    width: calc(37.5vw + 2rem);
+    max-height: 100dvh;   
+    height: min-content;
     opacity: 0;
+    padding: 1rem;
+    padding-top: 0rem;
 
-    overflow: scroll;
-    pointer-events: initial;
+    overflow: auto;
+    pointer-events: none;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
+
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column nowrap;
+    row-gap: 1rem;
 }
 
 div#cv-container {
     position: relative;
-    width: 37.5vw;
+    width: calc(37.5vw + 2rem);
     height: 100dvh;    
     opacity: 0;
+    padding: 1rem;
 
-    overflow: scroll;
-    pointer-events: initial;
+    overflow: auto;
+    pointer-events: none;
 }
 
 div#texts-container.active {
     position: relative;
-    width: 37.5vw;
-    height: 100dvh;   
+    width: calc(37.5vw + 2rem);
+    max-height: 100dvh;   
+    height: min-content;
     opacity: 1;
+    padding: 1rem;
+    padding-top: 0rem;
 
-    overflow: scroll;
+    overflow: auto;
     pointer-events: initial;
 }
 
 div#cv-container.active {
     position: relative;
-    width: 37.5vw;
+    width: calc(37.5vw + 2rem);
     height: 100dvh;   
     opacity: 1;
+    padding: 1rem;
 
-    overflow: scroll;
+    overflow: auto;
     pointer-events: initial;
 }
 
 div.padding {
-    height: 6.25rem;
+    height: 5.25rem;
     width: 100%;
+    pointer-events: none;
 }
 
 h1 {
     margin: 0;
-    margin-bottom: .25rem;
+    margin-bottom: 0rem;
 
     font-family: "Ladna Faux Bold", sans-serif;
     font-size: 2.25rem;
@@ -371,4 +389,33 @@ p.body {
 
     color: rgb(230, 230, 230);
 
+}
+
+
+
+a.text-article {
+    position: relative;
+    overflow: visible;
+
+    cursor: pointer;
+
+    transition: mix-blend-mode .1s ease-in-out, filter .2s ease-in-out;
+}
+
+a.text-article:hover {
+    mix-blend-mode: difference;
+    filter: blur(4px);
+    white-space: normal;
+}
+
+p.caption {
+    margin: 0;
+
+    font-family: "Ladna Faux Bold", sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: -.02rem;
+    text-wrap: balance;
+
+    color: rgb(230, 230, 230);
 }
