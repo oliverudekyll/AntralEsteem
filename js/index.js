@@ -83,21 +83,21 @@ document.addEventListener("DOMContentLoaded", function () {
   var worksPaths = [
     {
         images: [
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-1.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-2.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-3.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-4.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-5.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-6.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-7.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-1.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-2.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-3.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-4.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-5.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-6.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-7.jpg",
         ],
         title: "Dark Corners",
         caption: "Kanal Gallery, 2023"
     },
     {
         images: [
-            "../Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-1.jpg",
-            "../Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-2.jpg"
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-1.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-2.jpg"
         ],
         title: "On the Hate Speech Draft Legislation",
         caption: "Streets of Tallinn, 2021"

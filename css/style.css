@@ -1,21 +1,30 @@
 @font-face {
     font-family: "Ladna Faux Bold";
-    src: url(../Fonts/LadnaFaux-Bold.woff2);
+    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxBold.woff2);
 }
 
 @font-face {
+    font-family: "Ladna Faux Bold Italic";
+    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxBoldItalic.woff2);
+}
+
+
+@font-face {
     font-family: "Ladna Faux Regular";
-    src: url(../Fonts/LadnaFaux-Regular.woff2);
+    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxRegular.woff2);
 }
 
 @font-face {
     font-family: "Ladna Faux Regular Italic";
-    src: url(../Fonts/LadnaFaux-RegularItalic.woff);
+    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxRegularItalic.woff2);
 }
 
 body {
     margin: 0;
-    background-color: #002233;
+/*     background-color: #002233;
+    background-color: hsl(20, 50%, 10%); 
+    background-color: hsl(370, 50%, 10%);*/
+    background-color: hsl(360, 10%, 30%);
 }
 
 div.bg img {
@@ -45,7 +54,7 @@ video {
     left: 50%;
     transform: translate(-50%, -50%);
 
-    opacity: .07;
+    opacity: .15;
     filter: blur(8px);
     mix-blend-mode: normal;
     pointer-events: none;
@@ -102,9 +111,7 @@ a#contact {
 }
 
 a:hover {
-    mix-blend-mode: difference;
     filter: blur(4px);
-/*     white-space: nowrap; */
 }
 
 
@@ -153,6 +160,11 @@ div.nav-bar {
     z-index: 20;
 }
 
+div.nav-bar a {
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+}
+
 div.nav-button-container {
     margin: 0;
 /*     padding-left: 1rem; */
@@ -180,7 +192,6 @@ div.nav-button-container {
 }
 
 div.nav-button-container:hover {
-    mix-blend-mode: difference;
     filter: blur(4px);
 
 }
@@ -219,12 +230,12 @@ div#works-container {
     padding: 1rem;
 
     display: none;
+    opacity: 0;
     justify-content: flex-start;
     align-items: flex-start;
     column-gap: 4rem;
 
     z-index: 10;
-
 }
 
 div#works-container.active {
@@ -233,6 +244,7 @@ div#works-container.active {
     padding: 1rem;
 
     display: flex;
+    opacity: 1;
     justify-content: flex-start;
     align-items: flex-start;
     column-gap: 4rem;
@@ -308,7 +320,7 @@ div.column-container {
 div#texts-container {
     position: relative;
     width: calc(37.5vw + 2rem);
-    max-height: 100dvh;   
+    max-height: calc(100dvh - 2rem);   
     height: min-content;
     opacity: 0;
     padding: 1rem;
@@ -328,7 +340,7 @@ div#texts-container {
 div#cv-container {
     position: relative;
     width: calc(37.5vw + 2rem);
-    height: 100dvh;    
+    height: calc(100dvh - 2rem);    
     opacity: 0;
     padding: 1rem;
 
@@ -339,7 +351,7 @@ div#cv-container {
 div#texts-container.active {
     position: relative;
     width: calc(37.5vw + 2rem);
-    max-height: 100dvh;   
+    max-height: calc(100dvh - 2rem);   
     height: min-content;
     opacity: 1;
     padding: 1rem;
@@ -352,7 +364,7 @@ div#texts-container.active {
 div#cv-container.active {
     position: relative;
     width: calc(37.5vw + 2rem);
-    height: 100dvh;   
+    height: calc(100dvh - 2rem);   
     opacity: 1;
     padding: 1rem;
 
