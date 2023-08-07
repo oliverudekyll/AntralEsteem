@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ],
         title: "Dark Corners",
         caption: "Kanal Gallery, 2023",
-        href: "/EN/Works/Pimenurgad/Pimenurgad.html"
+        href: "https://oliverudekyll.github.io/AntralEsteem/EN/Works/Pimenurgad/Pimenurgad.html"
     },
     {
         images: [
