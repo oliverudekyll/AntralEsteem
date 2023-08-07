@@ -1,30 +1,43 @@
 @font-face {
     font-family: "Ladna Faux Bold";
-    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxBold.woff2);
+    src: url(../Fonts/Ladna-FauxBold.woff2);
 }
 
 @font-face {
     font-family: "Ladna Faux Bold Italic";
-    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxBoldItalic.woff2);
+    src: url(../Fonts/Ladna-FauxBoldItalic.woff2);
 }
 
 
 @font-face {
     font-family: "Ladna Faux Regular";
-    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxRegular.woff2);
+    src: url(../Fonts/Ladna-FauxRegular.woff2);
 }
 
 @font-face {
     font-family: "Ladna Faux Regular Italic";
-    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxRegularItalic.woff2);
+    src: url(../Fonts/Ladna-FauxRegularItalic.woff2);
 }
 
 body {
     margin: 0;
-/*     background-color: #002233;
+    background-color: #002233;
     background-color: hsl(20, 50%, 10%); 
-    background-color: hsl(370, 50%, 10%);*/
-    background-color: hsl(360, 10%, 30%);
+    background-color: hsl(370, 50%, 10%);
+    background-color: hsl(60, 10%, 30%);
+/*     background-color: hsl(250, 30%, 30%); */
+}
+
+div.gradient {
+    position: fixed;
+    min-width: 100vw;
+    min-height: 100vh;
+
+    pointer-events: none;
+
+    background:linear-gradient(to top ,hsl(0, 0%, 20%), transparent);
+
+    mix-blend-mode: normal;
 }
 
 div.bg img {
@@ -60,7 +73,7 @@ video {
     pointer-events: none;
 }
 
-div.title {
+a.title {
     position: fixed;
     margin: 0;
     bottom: 1rem;
@@ -70,14 +83,15 @@ div.title {
     font-size: 8rem;
     line-height: 6rem;
     letter-spacing: -.4rem;
+    text-decoration: none;
 
     color: rgb(230, 230, 230);
     z-index: 20;
 
-    transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out, font-size .25s ease-in-out, line-height .25s ease-in-out;
 }
 
-div.title:hover {
+a.title:hover {
     opacity: 0;
     cursor: zoom-in;
 }
@@ -155,9 +169,10 @@ div.nav-bar {
     right: 1rem;
 
     display: flex;
-    column-gap: 1rem;
+    column-gap: .7rem;
 
     z-index: 20;
+    transition: column-gap .25s ease-in-out;
 }
 
 div.nav-bar a {
@@ -193,110 +208,27 @@ div.nav-button-container {
 
 div.nav-button-container:hover {
     filter: blur(4px);
-
 }
 
-#works {
-    font-family: "Ladna Faux Regular", Arial, sans-serif;
-}
+.back-wrapper {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
 
-#works.active {
-    font-family: "Ladna Faux Bold", Arial, sans-serif;
-}
-
-#texts {
-    font-family: "Ladna Faux Regular", Arial, sans-serif;
-}
-
-#texts.active {
-    font-family: "Ladna Faux Bold", Arial, sans-serif;
-}
-
-#cv {
-    font-family: "Ladna Faux Regular", Arial, sans-serif;
-}
-
-#cv.active {
-    font-family: "Ladna Faux Bold", Arial, sans-serif;
-}
-
-
-
-
-
-div#works-container {
-    position: absolute;
-    top: 3rem;
-    padding: 1rem;
-
-    display: none;
-    opacity: 0;
-    justify-content: flex-start;
-    align-items: flex-start;
-    column-gap: 4rem;
-
-    z-index: 10;
-}
-
-div#works-container.active {
-    position: absolute;
-    top: 3rem;
-    padding: 1rem;
-
-    display: flex;
-    opacity: 1;
-    justify-content: flex-start;
-    align-items: flex-start;
-    column-gap: 4rem;
-
-    z-index: 10;
-    overflow: auto;
-
-}
-
-div.project {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: flex-start;
-    row-gap: .5rem;
-    /* max-width: min-content; */
-    aspect-ratio: 4 / 3;
-
-    transition: width .5s ease-in-out;
-}
-
-img.work {
-    position: relative;
-    height: calc(100vh - 21rem);
-    min-height: 500px;
-    object-fit: contain;
-
-    cursor: e-resize;
-}
-
-a.work {
-    font-family: "Ladna Faux Bold", sans-serif, Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1rem;
-    letter-spacing: -.04rem;
-    text-decoration: none;
-/*     text-transform: uppercase;
- */
-    color: rgb(230, 230, 230);
-    mix-blend-mode: difference;
     cursor: pointer;
-    white-space: nowrap;
-    z-index: 10;
-
-    transition: mix-blend-mode .1s ease-in-out, filter .2s ease-in-out;
+    z-index: 200;
 }
 
-a.work b {
-    font-family: "Ladna Faux Regular", sans-serif, Arial, sans-serif;
-    font-weight: normal;
-    padding-left: .2rem;
-    text-transform: initial;
+#back {
+    font-family: "Ladna Faux Regular", sans-serif;
+    font-size: 2.25rem;
+    line-height: 2rem;
+    color: rgb(230, 230, 230);
+    text-decoration: none;
+
+    transition: filter .2s ease-in-out;
 }
+
 
 
 
@@ -304,11 +236,11 @@ a.work b {
 
 div.column-container {
     position: fixed;
-    width: calc(100dvw - 2rem);
-    height: 100dv;
+    width: 100dvw;
+    height: 100dvh;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     mix-blend-mode: difference;
     z-index: 15;
@@ -320,14 +252,15 @@ div.column-container {
 div#texts-container {
     position: relative;
     width: calc(37.5vw + 2rem);
+    max-width: 65ch;
     max-height: calc(100dvh - 2rem);   
     height: min-content;
-    opacity: 0;
+    opacity: 1;
     padding: 1rem;
     padding-top: 0rem;
 
     overflow: auto;
-    pointer-events: none;
+    pointer-events: initial;
     flex-flow: column nowrap;
     row-gap: 1rem;
 
@@ -340,33 +273,17 @@ div#texts-container {
 div#cv-container {
     position: relative;
     width: calc(37.5vw + 2rem);
+    max-width: 65ch;
     height: calc(100dvh - 2rem);    
-    opacity: 0;
-    padding: 1rem;
-
-    overflow: auto;
-    pointer-events: none;
-}
-
-div#texts-container.active {
-    position: relative;
-    width: calc(37.5vw + 2rem);
-    max-height: calc(100dvh - 2rem);   
-    height: min-content;
     opacity: 1;
     padding: 1rem;
-    padding-top: 0rem;
 
-    overflow: auto;
-    pointer-events: initial;
-}
-
-div#cv-container.active {
-    position: relative;
-    width: calc(37.5vw + 2rem);
-    height: calc(100dvh - 2rem);   
-    opacity: 1;
-    padding: 1rem;
+    font-family: "Ladna Faux Regular", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    letter-spacing: -.02rem;
+    text-decoration: none;
+    color: rgb(230, 230, 230);
 
     overflow: auto;
     pointer-events: initial;
@@ -403,8 +320,6 @@ p.body {
 
 }
 
-
-
 a.text-article {
     position: relative;
     overflow: visible;
@@ -430,4 +345,31 @@ p.caption {
     text-wrap: balance;
 
     color: rgb(230, 230, 230);
+}
+
+a.text-article:active h1, a.text-article:active p.caption, a.text-article:active {
+    filter: blur(0px);
+}
+
+@media screen and (max-width: 1050px) {
+    a.title {
+        font-size: 6rem;
+        line-height: 4.5rem;
+
+        transition: font-size .25s ease-in-out, line-height .25s ease-in-out;
+    }
+
+/*     div.nav-bar {
+        column-gap: .5rem;
+        transition: column-gap .25s ease-in-out;
+    } */
+}
+
+@media screen and (max-height: 825px) {
+    a.title {
+        font-size: 6rem;
+        line-height: 4.5rem;
+
+        transition: opacity .25s ease-in-out, font-size .25s ease-in-out, line-height .25s ease-in-out;
+    }
 }

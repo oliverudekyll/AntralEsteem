@@ -35,23 +35,28 @@ document.addEventListener("DOMContentLoaded", function () {
   var textsPaths = [
     {
       title: "Glass Struggle",
-      caption: "Manifest and photographic essay"
+      caption: "Manifest and photographic essay",
+      link: "https://oliverudekyll.github.io/AntralEsteem/EN/Texts/Texts.html"
     },
     {
       title: "Transparency Register",
-      caption: "Essay and photography"
+      caption: "Essay and photography",
+      link: ""
     },
     {
       title: "Hybrid ≠ avant-garde",
-      caption: '"Art criticism of "NU Performance Festival"'
+      caption: '"Art criticism of "NU Performance Festival"',
+      link: ""
     },
     {
       title: "From the Peripheries",
-      caption: "Texts on windows"
+      caption: "Texts on windows",
+      link: ""
     },
     {
       title: "On The Role of Mental Images in Reasoning",
-      caption: "Degree work"
+      caption: "Degree work",
+      link: ""
     }
   ];
 
@@ -60,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   for (i = 0; i < textsPaths.length; i++) {
     var textLink = document.createElement("a");
     textLink.className = "text-article";
+    textLink.href = textsPaths[i].link;
 
     var h1 = document.createElement("h1");
     h1.textContent = textsPaths[i].title;
@@ -92,7 +98,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-7.jpg",
         ],
         title: "Dark Corners",
-        caption: "Kanal Gallery, 2023"
+        caption: "Kanal Gallery, 2023",
+        href: "/EN/Works/Pimenurgad/Pimenurgad.html"
     },
     {
         images: [
@@ -100,7 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
             "https://oliverudekyll.github.io/AntralEsteem/Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-2.jpg"
         ],
         title: "On the Hate Speech Draft Legislation",
-        caption: "Streets of Tallinn, 2021"
+        caption: "Streets of Tallinn, 2021",
+        href: "/EN/Works/VaenukoneEelnoust/VaenukoneEelnoust.html"
     }
   ];
 
@@ -120,6 +128,7 @@ function changeImage(index) {
 for (var i = 0; i < worksPaths.length; i++) {
   var a = document.createElement("a");
   a.className = "work";
+  a.href = worksPaths[i].href;
   var b = document.createElement("b");
   b.textContent = worksPaths[i].caption;
   a.textContent = worksPaths[i].title;
@@ -141,37 +150,81 @@ for (var i = 0; i < worksPaths.length; i++) {
 
 
 
-// WORKS BUTTON
-document.addEventListener("DOMContentLoaded", function(){
-    var worksButton = document.getElementById("works");
-    var worksContainer = document.getElementById("works-container");
+var worksButton = document.getElementById("works");
+var worksContainer = document.getElementById("works-container");
+var textsButton = document.getElementById("texts");
+var textsContainer = document.getElementById("texts-container");
+var cvButton = document.getElementById("cv");
+var cvContainer = document.getElementById("cv-container");
 
-    worksButton.addEventListener("click", function(){
-        worksButton.classList.toggle("active");
-        worksContainer.classList.toggle("active");
-    })
+if (window.location.hash === "#works") {
+    worksButton.classList.add("active");
+    worksContainer.classList.add("active");
+}
+
+if (window.location.hash === "#texts") {
+    textsButton.classList.add("active");
+    textsContainer.classList.add("active");
+}
+
+if (window.location.hash === "#cv") {
+    cvButton.classList.add("active");
+    cvContainer.classList.add("active");
+}
+
+// WORKS BUTTON
+worksButton.addEventListener("click", function () {
+    worksButton.classList.toggle("active");
+    worksContainer.classList.toggle("active");
+
+    // Update URL hash fragment when the button is toggled
+    if (worksButton.classList.contains("active")) {
+        window.location.hash = "works";
+    } else {
+        window.location.hash = "";
+    }
 });
 
 // TEXTS BUTTON
-document.addEventListener("DOMContentLoaded", function(){
-  var textsButton = document.getElementById("texts");
-  var textsContainer = document.getElementById("texts-container"); 
+textsButton.addEventListener("click", function () {
+    textsButton.classList.toggle("active");
+    textsContainer.classList.toggle("active");
 
-  textsButton.addEventListener("click", function(){
-      textsButton.classList.toggle("active");
-       textsContainer.classList.toggle("active");
-  })
+    // Update URL hash fragment when the button is toggled
+    if (textsButton.classList.contains("active")) {
+        window.location.hash = "texts";
+    } else {
+        window.location.hash = "";
+    }
 });
 
 // CV BUTTON
-document.addEventListener("DOMContentLoaded", function(){
-  var cvButton = document.getElementById("cv");
-   var cvContainer = document.getElementById("cv-container");
+cvButton.addEventListener("click", function () {
+    cvButton.classList.toggle("active");
+    cvContainer.classList.toggle("active");
 
-  cvButton.addEventListener("click", function(){
-      cvButton.classList.toggle("active");
-       cvContainer.classList.toggle("active");
-  })
+    // Update URL hash fragment when the button is toggled
+    if (cvButton.classList.contains("active")) {
+        window.location.hash = "cv";
+    } else {
+        window.location.hash = "";
+    }
+});
+
+/* var allElements = document.getElementsByTagName("a")
+
+function changeText(event) {
+  const originalText = event.target.textContent;
+  event.target.setAttribute('data-original-text', originalText);  event.target.textContent = `Do you accept cookies? Do you accept cookies? Do you accept cookies? Do you accept cookies?`;
 }
-);
-  
+
+function revertText(event) {
+  const originalText = event.target.getAttribute('data-original-text');;
+}
+
+for (let i = 0; i < allElements.length; i++) {
+  const element = allElements[i];
+  element.addEventListener('mouseover', changeText);
+  element.addEventListener('mouseout', revertText);
+}
+   */
