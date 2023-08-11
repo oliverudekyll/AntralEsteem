@@ -25,7 +25,7 @@ body {
     background-color: hsl(20, 50%, 10%); 
     background-color: hsl(370, 50%, 10%);
     background-color: hsl(60, 10%, 30%);
-    background-color: hsl(230, 30%, 20%);
+    background-color: hsl(230, 30%, 0%);
 }
 
 div.gradient {
@@ -35,7 +35,7 @@ div.gradient {
 
     pointer-events: none;
 
-    background:linear-gradient(to top ,hsl(0, 0%, 20%), transparent);
+    background:linear-gradient(to top ,hsl(0, 0%, 10%), transparent);
 
     mix-blend-mode: normal;
 }
@@ -234,142 +234,77 @@ div.nav-button-container:hover {
 
 
 
-div.column-container {
-    position: fixed;
-    width: 100dvw;
-    height: 100dvh;
-
-    display: flex;
-    justify-content: space-evenly;
-
-    mix-blend-mode: normal;
-    z-index: 15;
-
-    pointer-events: none;
-    overflow: hidden;
-}
-
-div#article-container {
-    position: relative;
-    width: calc(37.5vw + 2rem);
-    max-width: 65ch;
-    max-height: calc(100dvh - 2rem);   
-    height: min-content;
-    opacity: 1;
+div#works-container {
+    position: absolute;
+    top: 0rem;
     padding: 1rem;
-    padding-top: 0rem;
-
-    overflow: auto;
-    pointer-events: initial;
-    flex-flow: column nowrap;
-    row-gap: 1rem;
+    height: calc(100dvh - 5rem);
+    width: calc(100dvw - 2rem);
 
     display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
     align-items: flex-start;
-    flex-flow: column nowrap;
+    column-gap: 1rem;
     row-gap: 1rem;
+    align-content: flex-start;
+    align-self: center;
+
+    z-index: 10;
 }
 
-div#text-container {
+div.article {
     position: relative;
-    width: calc(37.5vw + 2rem);
-    max-width: 65ch;
-    height: calc(100dvh - 2rem);    
-    opacity: 1;
-    padding: 1rem;
+    max-width: min-content;
+    max-height: min-content;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
 
-    font-family: "Ladna Faux Regular", Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    letter-spacing: -.02rem;
-    text-decoration: none;
-    color: rgb(230, 230, 230);
+img.works {
+    position: relative;
+    object-fit: contain;
+    min-height: 25dvh;
+    max-height: 33dvh;
 
-    overflow: auto;
-    pointer-events: initial;
+    cursor: zoom-in;
 }
 
 div.padding {
-    height: 5.25rem;
-    width: 100%;
-    pointer-events: none;
-}
-
-h1 {
-    margin: 0;
-    margin-bottom: 0rem;
-
-    font-family: "Ladna Faux Bold", sans-serif;
-    font-size: 2.25rem;
-    line-height: 2.25rem;
-    letter-spacing: -.09rem;
-
-    color: rgb(230, 230, 230);
-}
-
-p.body {
-    margin: 0;
-
-    font-family: "Ladna Faux Regular", sans-serif;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    letter-spacing: -.02rem;
-    text-wrap: balance;
-
-    color: rgb(230, 230, 230);
-
-}
-
-a.text-article {
     position: relative;
-    overflow: visible;
-
-    cursor: pointer;
-
-    transition: mix-blend-mode .1s ease-in-out, filter .2s ease-in-out;
+    width: 100%;
+    height: 3rem;
 }
 
-a.text-article:hover {
-    mix-blend-mode: difference;
-    filter: blur(4px);
-    white-space: normal;
+
+
+
+
+div.quick-view-overlay {
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, .8);
+
+    z-index: 999;
+    cursor: zoom-out;
 }
 
-p.caption {
-    margin: 0;
-
-    font-family: "Ladna Faux Bold", sans-serif;
-    font-size: 1rem;
-    line-height: 1.25rem;
-    letter-spacing: -.02rem;
-    text-wrap: balance;
-
-    color: rgb(230, 230, 230);
+.quick-view-image {
+    position: relative;
+    max-height: calc(100dvh - 8rem);
+    max-width: calc(100dvw - 2rem);
 }
 
-a.text-article:active h1, a.text-article:active p.caption, a.text-article:active {
-    filter: blur(0px);
-}
-
-@media screen and (max-width: 1050px) {
-    a.title {
-        font-size: 6rem;
-        line-height: 4.5rem;
-
-        transition: font-size .25s ease-in-out, line-height .25s ease-in-out;
-    }
-
-/*     div.nav-bar {
-        column-gap: .5rem;
-        transition: column-gap .25s ease-in-out;
-    } */
-}
-
-@media screen and (max-height: 825px) {
-    a.title {
-        font-size: 6rem;
-        line-height: 4.5rem;
-
-        transition: opacity .25s ease-in-out, font-size .25s ease-in-out, line-height .25s ease-in-out;
+@media screen and (max-width: 850px) {
+    img.works {
+        max-height: calc(100dvh - 8rem);
+        max-width: calc(100dvw - 2rem);
+        cursor: zoom-in;
     }
 }

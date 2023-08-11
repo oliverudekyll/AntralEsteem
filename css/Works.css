@@ -1,22 +1,22 @@
 @font-face {
     font-family: "Ladna Faux Bold";
-    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxBold.woff2);
+    src: url(../Fonts/Ladna-FauxBold.woff2);
 }
 
 @font-face {
     font-family: "Ladna Faux Bold Italic";
-    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxBoldItalic.woff2);
+    src: url(../Fonts/Ladna-FauxBoldItalic.woff2);
 }
 
 
 @font-face {
     font-family: "Ladna Faux Regular";
-    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxRegular.woff2);
+    src: url(../Fonts/Ladna-FauxRegular.woff2);
 }
 
 @font-face {
     font-family: "Ladna Faux Regular Italic";
-    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxRegularItalic.woff2);
+    src: url(../Fonts/Ladna-FauxRegularItalic.woff2);
 }
 
 body {
@@ -26,6 +26,7 @@ body {
     background-color: hsl(370, 50%, 10%);*/
     background-color: hsl(60, 10%, 30%);
 /*     background-color: hsl(250, 30%, 30%); */
+    background-color: hsl(230, 30%, 20%);
 }
 
 div.gradient {
@@ -229,28 +230,12 @@ div.nav-button-container:hover {
     filter: blur(4px);
 }
 
-#works {
-    font-family: "Ladna Faux Regular", Arial, sans-serif;
-}
-
-#works.active {
+#exhibition-text {
     font-family: "Ladna Faux Bold", Arial, sans-serif;
 }
 
-#texts {
+#exhibition-text.active {
     font-family: "Ladna Faux Regular", Arial, sans-serif;
-}
-
-#texts.active {
-    font-family: "Ladna Faux Bold", Arial, sans-serif;
-}
-
-#cv {
-    font-family: "Ladna Faux Regular", Arial, sans-serif;
-}
-
-#cv.active {
-    font-family: "Ladna Faux Bold", Arial, sans-serif;
 }
 
 
@@ -275,9 +260,8 @@ div.project {
     display: flex;
     flex-flow: column nowrap;
     align-items: flex-start;
+    height: calc(100vh - 8rem);
     row-gap: .5rem;
-    /* max-width: min-content; */
-    aspect-ratio: 4 / 3;
 
     transition: width .5s ease-in-out;
 }
@@ -304,7 +288,7 @@ div.column-container {
     display: flex;
     justify-content: space-evenly;
 
-    mix-blend-mode: difference;
+    mix-blend-mode: normal;
     z-index: 15;
 
     pointer-events: none;
@@ -331,7 +315,7 @@ div#texts-container {
     row-gap: 1rem;
 }
 
-div#info-container {
+#info-container {
     position: relative;
     width: calc(37.5vw + 2rem);
     max-width: 65ch;
@@ -346,9 +330,24 @@ div#info-container {
     transition: opacity .25s ease-in-out;
 }
 
-div#info-container:hover div.column-container {
-    mix-blend-mode: normal;
+#info-container.active {
+    position: relative;
+    width: calc(37.5vw + 2rem);
+    max-width: 65ch;
+    height: min-content;
+    max-height: calc(100dvh - 2rem);    
+    opacity: 0;
+    padding: 1rem;
+
+    overflow: auto;
+    pointer-events: none;
+
+    transition: opacity .25s ease-in-out;
 }
+
+/* div.column-container:hover {
+    mix-blend-mode: normal;
+} */
 
 div.padding {
     height: 5.25rem;

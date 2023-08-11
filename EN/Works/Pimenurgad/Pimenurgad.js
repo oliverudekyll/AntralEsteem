@@ -35,13 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
   var worksPaths = [
     {
         images: [
-            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-1.jpg",
-            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-2.jpg",
-            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-3.jpg",
-            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-4.jpg",
-            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-5.jpg",
-            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-6.jpg",
-            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-7.jpg",
+            "/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-1.jpg",
+            "/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-2.jpg",
+            "/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-3.jpg",
+            "/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-4.jpg",
+            "/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-5.jpg",
+            "/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-6.jpg",
+            "/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-7.jpg",
         ],
         title: "Dark Corners",
         caption: "Kanal Gallery, 2022",
@@ -105,3 +105,10 @@ for (var i = 0; i < worksPaths.length; i++) {
   infoContainer.appendChild(text);
   infoContainer.appendChild(padding)
 }
+
+var exhibitionText = document.getElementById("exhibition-text");
+
+exhibitionText.addEventListener("click", function () {
+  exhibitionText.classList.toggle("active");
+  infoContainer.classList.toggle("active");
+});
