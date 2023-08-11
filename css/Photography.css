@@ -1,22 +1,22 @@
 @font-face {
     font-family: "Ladna Faux Bold";
-    src: url(../Fonts/Ladna-FauxBold.woff2);
+    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxBold.woff2);
 }
 
 @font-face {
     font-family: "Ladna Faux Bold Italic";
-    src: url(../Fonts/Ladna-FauxBoldItalic.woff2);
+    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxBoldItalic.woff2);
 }
 
 
 @font-face {
     font-family: "Ladna Faux Regular";
-    src: url(../Fonts/Ladna-FauxRegular.woff2);
+    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxRegular.woff2);
 }
 
 @font-face {
     font-family: "Ladna Faux Regular Italic";
-    src: url(../Fonts/Ladna-FauxRegularItalic.woff2);
+    src: url(https://oliverudekyll.github.io/AntralEsteem/Fonts/Ladna-FauxRegularItalic.woff2);
 }
 
 body {
