@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     {
       title: "Glass Struggle",
       caption: "Manifest and photographic essay",
-      link: "../EN/Texts/Texts.html"
+      link: "https://oliverudekyll.github.io/AntralEsteem/EN/Texts/Texts.html"
     },
     {
       title: "Transparency Register",
@@ -94,25 +94,25 @@ document.addEventListener("DOMContentLoaded", function () {
   var worksPaths = [
     {
         images: [
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-1.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-2.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-3.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-4.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-5.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-6.jpg",
-            "../Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-7.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-1.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-2.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-3.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-4.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-5.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-6.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Pimenurgad/StenEltermaa-Pimenurgad-7.jpg",
         ],
         title: "Dark Corners",
         caption: "Kanal Gallery, 2022",
-        href: "/EN/Works/Pimenurgad/Pimenurgad.html"
+        href: "https://oliverudekyll.github.io/AntralEsteem/EN/Works/Pimenurgad/Pimenurgad.html"
     },
     {
       images: [
-          "../Images/Content/Klaasvastupanu/1.jpg",
-          "../Images/Content/Klaasvastupanu/2.jpg",
-          "../Images/Content/Klaasvastupanu/3.jpg",
-          "../Images/Content/Klaasvastupanu/4.jpg",
-          "../Images/Content/Klaasvastupanu/5.jpg",
+          "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Klaasvastupanu/1.jpg",
+          "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Klaasvastupanu/2.jpg",
+          "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Klaasvastupanu/3.jpg",
+          "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Klaasvastupanu/4.jpg",
+          "https://oliverudekyll.github.io/AntralEsteem/Images/Content/Klaasvastupanu/5.jpg",
       ],
       title: "Glass Struggle",
       caption: "EKA Gallery, 2021",
@@ -120,8 +120,8 @@ document.addEventListener("DOMContentLoaded", function () {
   },
     {
         images: [
-            "../Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-1.jpg",
-            "../Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-2.jpg"
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-1.jpg",
+            "https://oliverudekyll.github.io/AntralEsteem/Images/Content/VaenukoneEelnoust/StenEltermaa-VaenukoneEelnoust-2.jpg"
         ],
         title: "On the Hate Speech Draft Legislation",
         caption: "Streets of Tallinn, 2021",
@@ -129,10 +129,10 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       images: [
-          "../Images/Content/LabipaistvuseRegister/1.jpg",
-          "../Images/Content/LabipaistvuseRegister/2.jpg",
-          "../Images/Content/LabipaistvuseRegister/3.jpg",
-          "../Images/Content/LabipaistvuseRegister/4.jpg"
+          "https://oliverudekyll.github.io/AntralEsteem/Images/Content/LabipaistvuseRegister/1.jpg",
+          "https://oliverudekyll.github.io/AntralEsteem/Images/Content/LabipaistvuseRegister/2.jpg",
+          "https://oliverudekyll.github.io/AntralEsteem/Images/Content/LabipaistvuseRegister/3.jpg",
+          "https://oliverudekyll.github.io/AntralEsteem/Images/Content/LabipaistvuseRegister/4.jpg"
       ],
       title: "Transparency Register",
       caption: "Draakoni Gallery, 2020",
@@ -140,10 +140,10 @@ document.addEventListener("DOMContentLoaded", function () {
   },
   {
     images: [
-        "../Images/Content/BrusseliPreluud/1.jpg",
-        "../Images/Content/BrusseliPreluud/2.jpg",
-        "../Images/Content/BrusseliPreluud/3.jpg",
-        "../Images/Content/BrusseliPreluud/4.jpg"
+        "https://oliverudekyll.github.io/AntralEsteem/Images/Content/BrusseliPreluud/1.jpg",
+        "https://oliverudekyll.github.io/AntralEsteem/Images/Content/BrusseliPreluud/2.jpg",
+        "https://oliverudekyll.github.io/AntralEsteem/Images/Content/BrusseliPreluud/3.jpg",
+        "https://oliverudekyll.github.io/AntralEsteem/Images/Content/BrusseliPreluud/4.jpg"
     ],
     title: "Brussels Prelude: The Liminal Zone",
     caption: "Tartu Art Museum, 2017",
